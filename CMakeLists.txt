@@ -17,4 +17,5 @@ pkg_check_modules(hyprutils REQUIRED IMPORTED_TARGET hyprutils)
 qt_standard_project_setup(REQUIRES 6.5)
 
 add_subdirectory(utils/dialog)
+add_subdirectory(utils/update-screen)
 
