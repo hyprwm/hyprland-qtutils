@@ -60,7 +60,7 @@ ApplicationWindow {
 
         Text {
             color: system.windowText
-            text: "Hyprland has been updated! <span style=\"font-family: 'Noto Color Emoji';\">😁</span><br/><br/>Please check the release notes on GitHub: <a href=\"https://github.com/hyprwm/Hyprland/releases\">https://github.com/hyprwm/Hyprland/releases</a><br/><br/>Every release may come with breaking changes, so if you get any config errors, try checking the latest release notes.<br/><br/>If you are using plugins, you will need to rebuild them."
+            text: "Hyprland has been updated! <span style=\"font-family: 'Noto Color Emoji';\">😄</span><br/><br/>Please check the release notes on GitHub: <a href=\"https://github.com/hyprwm/Hyprland/releases\">https://github.com/hyprwm/Hyprland/releases</a><br/><br/>Every release may come with breaking changes, so if you get any config errors, try checking the latest release notes.<br/><br/>If you are using plugins, you will need to rebuild them."
             Layout.alignment: Qt.AlignHCenter
             horizontalAlignment: Text.AlignHCenter
             textFormat: TextEdit.RichText
