@@ -83,6 +83,7 @@ ApplicationWindow {
                     text: dialog.dialogButtons[index]
                     onClicked: (e) => {
                         dialog.onButtonPress(dialog.dialogButtons[index])
+                        window.close()
                     }
                 }
             }

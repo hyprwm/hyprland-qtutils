@@ -14,13 +14,15 @@ qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(hyprland-update-screen
     main.cpp
+    Dialog.cpp
+    Dialog.hpp
     UpdateScreen.cpp
 )
 
 qt_add_qml_module(hyprland-update-screen
     URI org.hyprland.update-screen
     VERSION 1.0
-    QML_FILES main.qml
+    QML_FILES main.qml dialogMain.qml
 )
 
 target_link_libraries(hyprland-update-screen PRIVATE

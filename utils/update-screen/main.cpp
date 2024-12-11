@@ -6,6 +6,7 @@
 #include <qquickstyle.h>
 #include <qtenvironmentvariables.h>
 #include <QQmlContext>
+#include "Dialog.hpp"
 
 using namespace Hyprutils::String;
 
@@ -46,8 +47,16 @@ int main(int argc, char* argv[]) {
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE"))
         QQuickStyle::setStyle("org.kde.desktop");
 
+    // This entire mechanism fucking sucks,
+    // but I also suck at qml and I want to avoid spawning a new process as it takes a while.
+    auto popup     = new CDialog();
+    popup->title   = "Information";
+    popup->text    = "If you wish to disable this dialog, set ecosystem:no_update_news to true in your Hyprland config.";
+    popup->buttons = {"ok"};
+
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("updateScreen", dialog);
+    engine.rootContext()->setContextProperty("dialog", popup);
     engine.load("qrc:/qt/qml/org/hyprland/update-screen/main.qml");
 
     return app.exec();

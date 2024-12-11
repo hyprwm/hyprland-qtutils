@@ -3,6 +3,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import './'
 
 ApplicationWindow {
     id: window
@@ -81,7 +82,9 @@ ApplicationWindow {
             Button {
                 text: "Don't show this when I update"
                 onClicked: (e) => {
-                    updateScreen.onButtonPress("dontshow");
+                    var component = Qt.createComponent("dialogMain.qml")
+                    var newWindow    = component.createObject(window)
+                    newWindow.show()
                 }
             }
 

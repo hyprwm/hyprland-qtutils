@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
     qputenv("QT_LOGGING_RULES", QByteArray("*.debug=false;qml=false"));
 
     QString appTitle;
-    auto dialog = new CDialog();
+    auto    dialog = new CDialog();
 
     for (int i = 1; i < argc; ++i) {
         std::string_view arg = argv[i];
