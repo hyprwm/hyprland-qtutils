@@ -80,6 +80,13 @@ ApplicationWindow {
             Layout.alignment: Qt.AlignRight
 
             Button {
+                text: "Support the project"
+                onClicked: (e) => {
+                    updateScreen.onButtonPress("donate");
+                }
+            }
+
+            Button {
                 text: "Don't show this when I update"
                 onClicked: (e) => {
                     var component = Qt.createComponent("dialogMain.qml")
