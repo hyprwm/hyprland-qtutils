@@ -10,6 +10,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
     };
+
+    hyprland-qt-support = {
+      url = "github:hyprwm/hyprland-qt-support";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
   };
 
   outputs = {
@@ -33,6 +39,13 @@
     packages = eachSystem (system: {
       default = self.packages.${system}.hyprland-qtutils;
       inherit (pkgsFor.${system}) hyprland-qtutils;
+    });
+
+    devShells = eachSystem (system: {
+      default = import ./nix/shell.nix {
+        pkgs = pkgsFor.${system};
+        inherit (pkgsFor.${system}) hyprland-qtutils;
+      };
     });
   };
 }

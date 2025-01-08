@@ -15,6 +15,7 @@ in {
 
   hyprland-qtutils = lib.composeManyExtensions [
     inputs.hyprutils.overlays.default
+    inputs.hyprland-qt-support.overlays.default
     (final: prev: {
       hyprland-qtutils = final.callPackage ./. {
         stdenv = final.gcc14Stdenv;
