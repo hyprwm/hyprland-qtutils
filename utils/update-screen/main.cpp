@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
     app.setApplicationDisplayName("Hyprland Updated");
 
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE"))
-        QQuickStyle::setStyle("org.kde.desktop");
+        QQuickStyle::setStyle("org.hyprland.style");
 
     // This entire mechanism fucking sucks,
     // but I also suck at qml and I want to avoid spawning a new process as it takes a while.

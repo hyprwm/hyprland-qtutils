@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
     app.setApplicationName(appTitle.isEmpty() ? dialog->title : appTitle);
 
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE"))
-        QQuickStyle::setStyle("org.kde.desktop");
+        QQuickStyle::setStyle("org.hyprland.style");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("dialog", dialog);
