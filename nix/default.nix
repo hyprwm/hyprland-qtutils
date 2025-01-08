@@ -4,6 +4,7 @@
   cmake,
   pkg-config,
   hyprutils,
+  hyprland-qt-support,
   pciutils,
   qt6,
   version ? "0",
@@ -31,6 +32,7 @@ in
 
     buildInputs = [
       hyprutils
+      hyprland-qt-support
       qt6.qtbase
       qt6.qtsvg
       qt6.qtwayland
