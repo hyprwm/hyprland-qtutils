@@ -15,7 +15,6 @@
       url = "github:hyprwm/hyprland-qt-support";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
-      inputs.hyprlang.inputs.hyprutils.follows = "hyprutils";
     };
   };
 
