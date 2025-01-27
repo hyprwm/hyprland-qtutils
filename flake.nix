@@ -5,14 +5,17 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default-linux";
 
-    hyprutils = {
-      url = "github:hyprwm/hyprutils";
+    hyprlang = {
+      url = "github:hyprwm/hyprlang";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
     };
 
+    hyprutils.follows = "hyprlang/hyprutils";
+
     hyprland-qt-support = {
       url = "github:hyprwm/hyprland-qt-support";
+      inputs.hyprlang.follows = "hyprlang";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
     };
