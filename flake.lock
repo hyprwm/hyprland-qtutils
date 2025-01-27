@@ -2,7 +2,9 @@
   "nodes": {
     "hyprland-qt-support": {
       "inputs": {
-        "hyprlang": "hyprlang",
+        "hyprlang": [
+          "hyprlang"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -28,11 +30,9 @@
       "inputs": {
         "hyprutils": "hyprutils",
         "nixpkgs": [
-          "hyprland-qt-support",
           "nixpkgs"
         ],
         "systems": [
-          "hyprland-qt-support",
           "systems"
         ]
       },
@@ -53,12 +53,10 @@
     "hyprutils": {
       "inputs": {
         "nixpkgs": [
-          "hyprland-qt-support",
           "hyprlang",
           "nixpkgs"
         ],
         "systems": [
-          "hyprland-qt-support",
           "hyprlang",
           "systems"
         ]
@@ -69,29 +67,6 @@
         "owner": "hyprwm",
         "repo": "hyprutils",
         "rev": "006620eb29d54ea9086538891404c78563d1bae1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hyprwm",
-        "repo": "hyprutils",
-        "type": "github"
-      }
-    },
-    "hyprutils_2": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "systems": [
-          "systems"
-        ]
-      },
-      "locked": {
-        "lastModified": 1737725508,
-        "narHash": "sha256-jGmcPc6y/prg/4A8KGYqJ27nSPaProCMiFadaxNAKvA=",
-        "owner": "hyprwm",
-        "repo": "hyprutils",
-        "rev": "fb0c2d1de3d1ef7396d19c18ac09e12bd956929e",
         "type": "github"
       },
       "original": {
@@ -119,7 +94,11 @@
     "root": {
       "inputs": {
         "hyprland-qt-support": "hyprland-qt-support",
-        "hyprutils": "hyprutils_2",
+        "hyprlang": "hyprlang",
+        "hyprutils": [
+          "hyprlang",
+          "hyprutils"
+        ],
         "nixpkgs": "nixpkgs",
         "systems": "systems"
       }
