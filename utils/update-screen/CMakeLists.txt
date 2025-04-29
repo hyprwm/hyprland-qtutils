@@ -25,6 +25,12 @@ qt_add_qml_module(hyprland-update-screen
     QML_FILES main.qml dialogMain.qml
 )
 
+qt_add_resources(hyprland-update-screen "assets"
+    PREFIX "/"
+    FILES
+        assets/heart.svg
+)
+
 target_link_libraries(hyprland-update-screen PRIVATE
     Qt6::Widgets Qt6::QuickControls2 Qt6::WaylandClientPrivate PkgConfig::hyprutils
 )
