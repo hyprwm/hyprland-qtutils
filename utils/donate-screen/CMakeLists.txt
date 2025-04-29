@@ -23,6 +23,12 @@ qt_add_qml_module(hyprland-donate-screen
     QML_FILES main.qml
 )
 
+qt_add_resources(hyprland-donate-screen "assets"
+    PREFIX "/"
+    FILES
+        assets/heart.svg
+)
+
 target_link_libraries(hyprland-donate-screen PRIVATE
     Qt6::Widgets Qt6::QuickControls2 Qt6::WaylandClientPrivate PkgConfig::hyprutils
 )

@@ -81,6 +81,10 @@ ApplicationWindow {
             Layout.alignment: Qt.AlignRight
 
             Button {
+                icon.color: "transparent"
+                icon.source: "qrc:/assets/heart.svg"
+                icon.height: 18
+                icon.width: 18
                 text: "Donate"
                 onClicked: (e) => {
                     donateScreen.onButtonPress("donate");
