@@ -1,11 +1,11 @@
 #include "Dialog.hpp"
-#include <hyprutils/string/VarList.hpp>
-#include <print>
-#include <qapplication.h>
-#include <qqmlapplicationengine.h>
-#include <qquickstyle.h>
-#include <qtenvironmentvariables.h>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
+#include <QtEnvironmentVariables>
+#include <print>
+#include <hyprutils/string/VarList.hpp>
 
 using namespace Hyprutils::String;
 
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    QApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
     app.setApplicationName(appTitle.isEmpty() ? dialog->title : appTitle);
 
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE"))

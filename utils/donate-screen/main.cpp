@@ -1,11 +1,10 @@
 #include "DonateScreen.hpp"
-#include <hyprutils/string/VarList.hpp>
-#include <print>
-#include <qapplication.h>
-#include <qqmlapplicationengine.h>
-#include <qquickstyle.h>
-#include <qtenvironmentvariables.h>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
+#include <QtEnvironmentVariables>
+#include <hyprutils/string/VarList.hpp>
 
 using namespace Hyprutils::String;
 
@@ -15,7 +14,7 @@ int main(int argc, char* argv[]) {
 
     auto dialog = new CDonateScreen();
 
-    QApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
     app.setApplicationName("Support Hyprland");
     app.setApplicationDisplayName("Support Hyprland");
 

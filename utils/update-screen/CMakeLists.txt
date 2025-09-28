@@ -32,7 +32,7 @@ qt_add_resources(hyprland-update-screen "assets"
 )
 
 target_link_libraries(hyprland-update-screen PRIVATE
-    Qt6::Widgets Qt6::QuickControls2 Qt6::WaylandClientPrivate PkgConfig::hyprutils
+    Qt6::Quick Qt6::QuickControls2 Qt6::WaylandClientPrivate PkgConfig::hyprutils
 )
 
 

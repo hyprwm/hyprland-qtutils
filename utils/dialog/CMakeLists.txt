@@ -24,7 +24,7 @@ qt_add_qml_module(hyprland-dialog
 )
 
 target_link_libraries(hyprland-dialog PRIVATE
-    Qt6::Widgets Qt6::QuickControls2 Qt6::WaylandClientPrivate PkgConfig::hyprutils
+    Qt6::Quick Qt6::QuickControls2 Qt6::WaylandClientPrivate PkgConfig::hyprutils
 )
 
 
