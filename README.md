@@ -1,5 +1,8 @@
 # Hyprland QT utils
 
+> [!IMPORTANT]
+> This repo has been superseded by ![hyprland-guiutils](https://github.com/hyprwm/hyprland-guiutils)
+
 This repo houses some qt/qml utilities that might be used by various hypr* apps.
 
 ## Dependencies
